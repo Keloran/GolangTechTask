@@ -13,6 +13,21 @@ type buffHandler struct {
 	store BuffStore
 }
 
+func (b *buffHandler) ListBuffs(w http.ResponseWriter, r *http.Request) {
+	buffs, err := b.store.ListBuffs()
+	if err != nil {
+		http.Error(w, fmt.Sprintf("failed to retrieve buffs, %+v", err), http.StatusInternalServerError)
+		return
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	if err := json.NewEncoder(w).Encode(buffs); err != nil {
+		http.Error(w, fmt.Sprintf("failed to encode buffs, %+v", err), http.StatusInternalServerError)
+		return
+	}
+	return
+}
+
 func (b *buffHandler) GetBuff(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {
