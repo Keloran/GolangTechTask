@@ -15,7 +15,7 @@ func main() {
 	}
 
 	// Replace with DB impl
-	store := handlers.NewInMemStore()
+	store := handlers.Storage()
 
 	routes := handlers.Routes(store)
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), routes); err != nil {

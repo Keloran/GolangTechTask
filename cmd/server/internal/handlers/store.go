@@ -17,3 +17,4 @@ type StreamStore interface {
   ListStreams() ([]*StreamList, error)
   AppendBuffs(id uint64, buffs []uint64) (*Stream, error)
 }
+

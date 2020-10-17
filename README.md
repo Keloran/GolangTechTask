@@ -19,7 +19,7 @@ In this repo is a small application with the following endpoints already impleme
     Content-Type: application/json
     Date: Wed, 07 Oct 2020 13:05:53 GMT
     Content-Length: 59
-    
+
     {"id":1,"question":"whos the man?","answers":["you","me"]}
     ```
 
@@ -32,7 +32,7 @@ In this repo is a small application with the following endpoints already impleme
     Content-Type: application/json
     Date: Wed, 07 Oct 2020 13:16:24 GMT
     Content-Length: 59
-    
+
     {"id":1,"question":"whos the man?","answers":["you","me"]}
     ```
 
@@ -41,7 +41,7 @@ In this repo is a small application with the following endpoints already impleme
 1. `POST /stream`
 
     That creates a stream in the system.
-    
+
     Maybe structured like:
     ```json
     {"stream_name": "super cool stream"}
@@ -51,7 +51,7 @@ In this repo is a small application with the following endpoints already impleme
 2. `GET /stream`
 
     That returns a paginated list of streams in the system.
-    
+
     Maybe structured like:
     ```json
     [
@@ -69,7 +69,7 @@ In this repo is a small application with the following endpoints already impleme
 3. `GET /stream/{stream_id}`
 
     That returns a single stream along with the buffs associated with that stream.
-    
+
     Maybe structured like:
     ```json
     {
@@ -92,7 +92,7 @@ For production useage we need a relational DB implementation of the `handlers.St
 To add this you will have to:
 * Setup a docker-compose file to spin up your DB of choice
 * Use whatever tooling you are comfortable with to manage migrating the schema
-* Add a database package that prodives a DB backed implementation of the `handlers.Store` interface
+* Add a database package that provides a DB backed implementation of the `handlers.Store` interface
     and use that in `cmd/server/main.go` in place of the in-memory store
 
 

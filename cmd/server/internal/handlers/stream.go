@@ -47,7 +47,7 @@ func (s *streamHandler) CreateStream(w http.ResponseWriter, r *http.Request) {
 
   stream, err = s.store.GetStream(id)
   if err != nil {
-    http.Error(w, fmt.Sprintf("failed to get stream, %+v", err), http.StatusInternalServerError)
+    http.Error(w, fmt.Sprintf("failed to get stream on create, %+v", err), http.StatusInternalServerError)
     return
   }
 

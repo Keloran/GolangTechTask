@@ -1,0 +1,19 @@
+version: '3'
+services:
+  database:
+    image: postgres:11.5
+    environment:
+      - POSTGRES_PASSWORD=tester
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - 5432:5432
+  service:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - 8080:80
+    links:
+      - database
