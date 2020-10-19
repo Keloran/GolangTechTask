@@ -1,5 +1,8 @@
-.PHONY: run database justDB
-run:
+.PHONY: run database justDB service
+
+run: justDB service
+
+service:
 	docker-compose up -d service
 
 database: justDB
