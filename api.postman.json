@@ -1,0 +1,237 @@
+{
+  "info": {
+    "name": "api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Buffs",
+      "item": [
+        {
+          "name": "Create Buff",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{HOST_URI}}/buff",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/buff"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": false,
+                "description": null
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false,
+              "raw": "{\"question\":\"who's the man?\",\"answers\":[\"you\",\"me\",\"bob\"]}"
+            },
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Get Buff",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{HOST_URI}}/buff/2",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/buff/2"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "List Buffs",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{HOST_URI}}/buff",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/buff"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    },
+    {
+      "name": "Streams",
+      "item": [
+        {
+          "name": "Create Stream",
+          "request": {
+            "method": "POST",
+            "url": {
+              "raw": "{{HOST_URI}}/stream",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/stream"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": false,
+                "description": null
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false,
+              "raw": "{\"stream_name\":\"super cool stream\"}"
+            },
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Attach Buffs",
+          "request": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{HOST_URI}}/stream/2",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/stream/2"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "disabled": false,
+                "description": null
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false,
+              "raw": "{\"buffs\":[1]}"
+            },
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "List Streams",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{HOST_URI}}/stream",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/stream"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        },
+        {
+          "name": "Get Stream",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{HOST_URI}}/stream/2",
+              "query": null,
+              "protocol": null,
+              "host": [
+                "{{HOST_URI}}/stream/2"
+              ],
+              "port": null,
+              "path": null
+            },
+            "description": "",
+            "header": [],
+            "body": null,
+            "auth": null
+          },
+          "protocolProfileBehavior": {
+            "followRedirects": false,
+            "followOriginalHttpMethod": false,
+            "followAuthorizationHeader": false
+          },
+          "response": []
+        }
+      ],
+      "protocolProfileBehavior": null,
+      "response": []
+    }
+  ]
+}
